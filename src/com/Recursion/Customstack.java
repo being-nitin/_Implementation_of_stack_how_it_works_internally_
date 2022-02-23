@@ -28,6 +28,12 @@ public class Customstack {
         }
         return data[top--];
     }
+    public int peek() throws Exception{
+        if(isEmpty()){
+            throw new Exception("cannot peek from an empty stack ");
+        }
+        return data[top];
+    }
     public boolean isFull(){
         return top == data.length-1;
     }
